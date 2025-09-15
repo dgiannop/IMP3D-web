@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My App</title>
+<style>
+  body{font-family:system-ui,Segoe UI,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.5}
+  .cta{display:inline-block;padding:12px 18px;border:1px solid #ccc;border-radius:8px;text-decoration:none}
+</style>
+<h1>My Windows App</h1>
+<p>Download the latest version for Windows:</p>
+<p>
+  <!-- Change OWNER, REPO, and FILE.exe -->
+  <a class="cta" href="https://github.com/OWNER/REPO/releases/latest/download/FILE.exe">
+    Download .exe
+  </a>
+</p>
+<p><small>Windows may show a SmartScreen warning if the file isn’t code-signed.</small></p>
