@@ -1,18 +1,107 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My App</title>
-<style>
-  body{font-family:system-ui,Segoe UI,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.5}
-  .cta{display:inline-block;padding:12px 18px;border:1px solid #ccc;border-radius:8px;text-decoration:none}
-</style>
-<h1>My Windows App</h1>
-<p>Download the latest version for Windows:</p>
-<p>
-  <!-- Change OWNER, REPO, and FILE.exe -->
-  <a class="cta" href="https://github.com/OWNER/REPO/releases/latest/download/FILE.exe">
-    Download .exe
-  </a>
-</p>
-<p><small>Windows may show a SmartScreen warning if the file isn’t code-signed.</small></p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMP3D — Subdivision 3D Modeler</title>
+  <meta name="description" content="IMP3D is a professional‑grade subdivision modeler focused on fast box modeling, clean topology, and robust UV unwrapping (LSCM, ABF++). Free to download.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/imp_logo.png" alt="IMP3D Logo">
+      <span class="title">IMP3D</span>
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#download" class="btn">Download</a>
+      <a href="https://github.com/dgiannop/IMP3D-web" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div>
+      <span class="badge">Free • Professional grade</span>
+      <h1>Subdivision modeling that feels fast and precise</h1>
+      <p>IMP3D is a focused 3D modeler for artists and engineers who want clean Catmull‑Clark surfaces, predictable tools, and an uncluttered workflow.
+      Built in modern C++ with OpenGL/Vulkan backends.</p>
+      <div class="cta-row">
+        <a class="button primary" id="download" href="IMP3D-0.1.0-win64.zip">
+          Download for Windows
+        </a>
+        <a class="button" href="https://github.com/dgiannop/IMP3D-web" rel="noopener">View on GitHub</a>
+        <span class="code">v0.1 • Windows 11</span>
+      </div>
+    </div>
+    <div class="panel figure">
+      <img src="assets/Imp01.PNG" alt="IMP3D viewport render">
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>What makes IMP3D different</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Box Modeling, refined</h3>
+          <p><strong>Box modeling</strong> starts from simple primitives (box, cylinder, plane) and iteratively
+          <em>extrudes</em>, <em>bevels</em>, and <em>connects</em> to form complex shapes. IMP3D streamlines these steps, keeps indices stable, and makes loop &amp; ring operations effortless.</p>
+        </div>
+        <div class="card">
+          <h3>Subdivision Surface</h3>
+          <p>High‑quality Catmull‑Clark subdivision with primary/secondary edge visualization. Edit the coarse mesh and preview the smooth limit surface in real‑time.</p>
+        </div>
+        <div class="card">
+          <h3>UV Unwrapping</h3>
+          <p>Robust UVs with industry‑standard parameterization methods such as <strong>LSCM</strong> and <strong>ABF++</strong>, giving predictable, low‑distortion maps for texturing.</p>
+        </div>
+        <div class="card">
+          <h3>Selection that obeys topology</h3>
+          <p>Quad‑aware loops, rings, and reliable picking—optimized for both perspective and orthographic workflows.</p>
+        </div>
+        <div class="card">
+          <h3>Performance</h3>
+          <p>Engineered for stability with cache‑friendly mesh data structures, fast undo/redo, and GPU‑friendly rendering paths.</p>
+        </div>
+        <div class="card">
+          <h3>Open &amp; Free</h3>
+          <p>No nags, no telemetry. Download, model, and ship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="kicker">Gallery</div>
+      <h2>Screenshots</h2>
+      <div class="figure" style="margin:18px 0">
+        <img src="assets/bendTx.JPG" alt="UV checker on deformed surface">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Tech note</div>
+      <p>UV parameterization methods mentioned here (LSCM, ABF++) refer to widely used algorithms for minimizing angular and area distortion when flattening surfaces to 2D for texturing.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> IMP3D — Subdivision 3D Modeler
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
