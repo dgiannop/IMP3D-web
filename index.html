@@ -95,13 +95,18 @@
     <div class="kicker">Tech Notes</div>
       <h2>Working with IMP 3D</h2>
       <p>
-        Start by creating a primitive such as a <strong>Box</strong> or <strong>Quad Ball</strong>. 
+        Start by creating a primitive such as a <strong>Box</strong> or <strong>Quad Sphere</strong>. 
         IMP3D supports multiple selection modes available in every tab: <strong>Points</strong>, <strong>Edges</strong>, and <strong>Polygons</strong>.
       </p>
       <p>
         Most tools work directly on the current selection, or on the entire mesh if nothing is selected. 
         For example, you can select a point, edge, or polygon and move it with the <em>Move Tool</em>. 
         Selecting a polygon and then <kbd>Shift</kbd> + <kbd>Double-Click</kbd> on an adjacent polygon quickly creates a polygon loop.
+      </p>
+      <p>
+        For each tool, you can open the <strong>Tool Properties</strong> dialog to adjust parameters manually. 
+        For primitive tools, some of the most important properties include adding <em>segments</em>, <em>sides</em>, and <em>rings</em>, 
+        which let you control the resolution and shape of the generated mesh.
       </p>
       <p>
         With a loop selected, hit the <strong>Extrude</strong> button and drag to extrude the geometry. 
