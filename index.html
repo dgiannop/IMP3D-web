@@ -124,6 +124,53 @@
   </section>
 </main>
 
+<section id="feedback" class="section">
+  <div class="container">
+    <div class="kicker">Feedback</div>
+    <h2>Send Feedback</h2>
+
+    <form id="feedbackForm">
+      <div class="form-row">
+        <label for="fb-name">Name</label>
+        <input type="text" id="fb-name" name="name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="fb-email">Email</label>
+        <input type="email" id="fb-email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="fb-message">Message</label>
+        <textarea id="fb-message" name="message" rows="6"
+                  placeholder="Questions, feedback, or problems..." required></textarea>
+      </div>
+
+      <button type="submit" class="button primary">Send Feedback</button>
+      <p id="fb-note" class="muted" style="margin-top:10px;"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('feedbackForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('fb-name').value.trim();
+    const email = document.getElementById('fb-email').value.trim();
+    const msg = document.getElementById('fb-message').value.trim();
+
+    const to = 'daniel.giannopoulos@icloud.com';
+    const subject = encodeURIComponent(`IMP3D Feedback from ${name || 'Anonymous'}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    document.getElementById('fb-note').textContent =
+      'If your email app did not open, please email: daniel.giannopoulos@icloud.com';
+  });
+</script>
+
+
 <footer class="footer">
   <div class="container">
     © <span id="year"></span> IMP3D — Subdivision 3D Modeler
