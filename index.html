@@ -1,238 +1,238 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IMP3D â€” Subdivision 3D Modeler</title>
-  <meta name="description" content="IMP3D is a modern subdivision modeler focused on fast box modeling, clean topology, and robust UV unwrapping (LSCM, ABF++). Built in C++ with a Vulkan renderer.">
+  <meta name="description"
+    content="IMP3D is a modern subdivision modeler focused on fast box modeling, clean topology, and robust UV unwrapping (LSCM, ABF++). Built in C++ with a Vulkan renderer.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container nav">
-    <div class="brand">
-      <img src="assets/imp_logo.png" alt="IMP3D Logo">
-      <span class="title">IMP3D</span>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/imp_logo.png" alt="IMP3D Logo">
+        <span class="title">IMP3D</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#technotes">How it works</a>
+        <a href="#download" class="btn">Download</a>
+        <a href="https://github.com/dgiannop/IMP-3D" rel="noopener">GitHub</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#technotes">How it works</a>
-      <a href="#download" class="btn">Download</a>
-      <a href="https://github.com/dgiannop/IMP-3D" rel="noopener">GitHub</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="hero container">
-    <div>
-      <span class="badge">Free â€¢ Vulkan renderer â€¢ In active development</span>
-      <h1>Subdivision modeling that feels fast and predictable</h1>
-      <p>
-        IMP3D is a focused 3D modeler for artists and engineers who care about clean
-        Catmull-Clark surfaces, stable topology tools, and an uncluttered workflow.
-        Built in modern C++ with a Vulkan rendering backend.
-      </p>
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="badge">Free â€¢ Vulkan renderer â€¢ In active development</span>
+        <h1>Subdivision modeling that feels fast and predictable</h1>
+        <p>
+          IMP3D is a focused 3D modeler for artists and engineers who care about clean
+          Catmull-Clark surfaces, stable topology tools, and an uncluttered workflow.
+          Built in modern C++ with a Vulkan rendering backend.
+        </p>
 
-      <div class="cta-row">
-        <a class="button primary" id="download"
-           href="https://github.com/dgiannop/IMP3D-web/releases/download/v0.1.8/IMP3D-0.1.8-win64.zip">
-          Download for Windows
-        </a>
-        <a class="button" href="https://github.com/dgiannop/IMP3D-web/releases" rel="noopener">
-          Releases
-        </a>
-        <a class="button" href="https://github.com/dgiannop/IMP-3D" rel="noopener">
-          Source on GitHub
-        </a>
-        <span class="code">v0.1 â€¢ Windows 11</span>
+        <div class="cta-row">
+          <a class="button primary" id="download"
+            href="https://github.com/dgiannop/IMP3D-web/releases/download/v0.1.8/IMP3D-0.1.8-win64.zip">
+            Download for Windows
+          </a>
+          <a class="button" href="https://github.com/dgiannop/IMP3D-web/releases" rel="noopener">
+            Releases
+          </a>
+          <a class="button" href="https://github.com/dgiannop/IMP-3D" rel="noopener">
+            Source on GitHub
+          </a>
+          <span class="code">v0.1 â€¢ Windows 11</span>
+        </div>
+
+        <p class="note" style="margin-top:14px;">
+          <em>Note:</em> IMP3D is under active development. Some features may be incomplete
+          or temporarily disabled while the core is stabilized.
+        </p>
       </div>
 
-      <p class="note" style="margin-top:14px;">
-        <em>Note:</em> IMP3D is under active development. Some features may be incomplete
-        or temporarily disabled while the core is stabilized.
-      </p>
-    </div>
+      <div class="panel figure">
+        <img src="assets/Imp01.PNG" alt="IMP3D viewport render">
+      </div>
+    </section>
 
-    <div class="panel figure">
-      <img src="assets/Imp01.PNG" alt="IMP3D viewport render">
-    </div>
-  </section>
+    <section id="features" class="section">
+      <div class="container">
+        <h2>What makes IMP3D different</h2>
+        <div class="grid">
 
-  <section id="features" class="section">
+          <div class="card">
+            <h3>Box Modeling, refined</h3>
+            <p>
+              Start from simple primitives (box, cylinder, plane) and iteratively
+              <em>extrude</em>, <em>bevel</em>, and <em>connect</em> to build complex shapes.
+              IMP3D keeps these operations fast, stable, and topology-aware.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Subdivision Surface preview</h3>
+            <p>
+              Real-time Catmull-Clark subdivision with primary/secondary edge visualization.
+              Edit the coarse mesh while previewing the smooth result.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>UV Unwrapping</h3>
+            <p>
+              Robust UV workflows with industry-standard parameterization methods including
+              <strong>LSCM</strong> and <strong>ABF++</strong>, producing predictable,
+              low-distortion maps for texturing.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Topology-aware selection</h3>
+            <p>
+              Quad-aware loops and rings, reliable picking, and tools tuned for both
+              perspective and orthographic workflows.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Performance & stability</h3>
+            <p>
+              Cache-friendly mesh data structures, fast undo/redo, and GPU-friendly
+              rendering paths keep interaction responsive on real scenes.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Open &amp; Free</h3>
+            <p>
+              No nags, no telemetry. Download, model, and ship.
+              Source code and development happen openly on GitHub.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="kicker">Gallery</div>
+        <h2>Screenshots</h2>
+
+        <div class="figure" style="margin:18px 0">
+          <img src="assets/ImpRT.png" alt="IMP3D Ray tracing">
+        </div>
+
+        <div class="figure" style="margin:18px 0">
+          <img src="assets/bendTx.JPG" alt="UV checker on deformed surface">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="technotes" class="section">
+      <div class="container">
+        <div class="kicker">Tech Notes</div>
+        <h2>Working with IMP3D</h2>
+
+        <p>
+          Start by creating a primitive such as a <strong>Box</strong> or
+          <strong>Quad Sphere</strong>. IMP3D supports selection modes available in every tab:
+          <strong>Points</strong>, <strong>Edges</strong>, and <strong>Polygons</strong>.
+        </p>
+
+        <p>
+          Most tools operate on the current selection, or on the entire mesh when nothing
+          is selected. <kbd>Shift</kbd> + <kbd>Double-Click</kbd> quickly selects polygon loops.
+        </p>
+
+        <p>
+          Use the <strong>Tool Properties</strong> dialog to adjust parameters precisely.
+          Primitive tools expose <em>segments</em>, <em>sides</em>, and <em>rings</em> to control
+          resolution and shape.
+        </p>
+
+        <p>
+          With a loop selected, click <strong>Extrude</strong> and drag to extrude geometry.
+          Increase or decrease subdivision levels using the UI or the <kbd>-</kbd> and <kbd>=</kbd> keys.
+        </p>
+
+        <p>
+          Use <strong>Freeze</strong> to bake subdivision into real geometry, or
+          <strong>Triangulate</strong> for export to game engines and other pipelines.
+        </p>
+
+        <p class="note">
+          <em>Note:</em> Some features may be temporarily disabled as development continues.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <section id="feedback" class="section">
     <div class="container">
-      <h2>What makes IMP3D different</h2>
-      <div class="grid">
+      <div class="kicker">Feedback</div>
+      <h2>Send Feedback</h2>
 
-        <div class="card">
-          <h3>Box Modeling, refined</h3>
-          <p>
-            Start from simple primitives (box, cylinder, plane) and iteratively
-            <em>extrude</em>, <em>bevel</em>, and <em>connect</em> to build complex shapes.
-            IMP3D keeps these operations fast, stable, and topology-aware.
-          </p>
+      <form id="feedbackForm">
+        <div class="form-row">
+          <label for="fb-name">Name</label>
+          <input type="text" id="fb-name" placeholder="Your name" required>
         </div>
 
-        <div class="card">
-          <h3>Subdivision Surface preview</h3>
-          <p>
-            Real-time Catmull-Clark subdivision with primary/secondary edge visualization.
-            Edit the coarse mesh while previewing the smooth result.
-          </p>
+        <div class="form-row">
+          <label for="fb-email">Email</label>
+          <input type="email" id="fb-email" placeholder="you@example.com" required>
         </div>
 
-        <div class="card">
-          <h3>UV Unwrapping</h3>
-          <p>
-            Robust UV workflows with industry-standard parameterization methods including
-            <strong>LSCM</strong> and <strong>ABF++</strong>, producing predictable,
-            low-distortion maps for texturing.
-          </p>
+        <div class="form-row">
+          <label for="fb-message">Message</label>
+          <textarea id="fb-message" rows="6" placeholder="Questions, feedback, or problems..." required></textarea>
         </div>
 
-        <div class="card">
-          <h3>Topology-aware selection</h3>
-          <p>
-            Quad-aware loops and rings, reliable picking, and tools tuned for both
-            perspective and orthographic workflows.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Performance & stability</h3>
-          <p>
-            Cache-friendly mesh data structures, fast undo/redo, and GPU-friendly
-            rendering paths keep interaction responsive on real scenes.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Open &amp; Free</h3>
-          <p>
-            No nags, no telemetry. Download, model, and ship.
-            Source code and development happen openly on GitHub.
-          </p>
-        </div>
-
-      </div>
+        <button type="submit" class="button primary">Send Feedback</button>
+        <p id="fb-note" class="muted" style="margin-top:10px;"></p>
+      </form>
     </div>
   </section>
 
-  <section id="gallery" class="section">
-    <div class="container">
-      <div class="kicker">Gallery</div>
-      <h2>Screenshots</h2>
+  <script>
+    const form = document.getElementById('feedbackForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = fb - name.value.trim();
+      const email = fb - email.value.trim();
+      const msg = fb - message.value.trim();
 
-      <div class="figure" style="margin:18px 0">
-        <img src="assets/bendTx.JPG" alt="UV checker on deformed surface">
-      </div>
+      const to = 'daniel.giannopoulos@icloud.com';
+      const subject = encodeURIComponent(`IMP3D Feedback from ${name || 'Anonymous'}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
 
-      <div class="figure" style="margin:18px 0">
-        <img src="assets/ui2.png" alt="IMP3D UI">
-      </div>
-    </div>
-  </section>
-
-  <section id="technotes" class="section">
-    <div class="container">
-      <div class="kicker">Tech Notes</div>
-      <h2>Working with IMP3D</h2>
-
-      <p>
-        Start by creating a primitive such as a <strong>Box</strong> or
-        <strong>Quad Sphere</strong>. IMP3D supports selection modes available in every tab:
-        <strong>Points</strong>, <strong>Edges</strong>, and <strong>Polygons</strong>.
-      </p>
-
-      <p>
-        Most tools operate on the current selection, or on the entire mesh when nothing
-        is selected. <kbd>Shift</kbd> + <kbd>Double-Click</kbd> quickly selects polygon loops.
-      </p>
-
-      <p>
-        Use the <strong>Tool Properties</strong> dialog to adjust parameters precisely.
-        Primitive tools expose <em>segments</em>, <em>sides</em>, and <em>rings</em> to control
-        resolution and shape.
-      </p>
-
-      <p>
-        With a loop selected, click <strong>Extrude</strong> and drag to extrude geometry.
-        Increase or decrease subdivision levels using the UI or the <kbd>-</kbd> and <kbd>=</kbd> keys.
-      </p>
-
-      <p>
-        Use <strong>Freeze</strong> to bake subdivision into real geometry, or
-        <strong>Triangulate</strong> for export to game engines and other pipelines.
-      </p>
-
-      <p class="note">
-        <em>Note:</em> Some features may be temporarily disabled as development continues.
-      </p>
-    </div>
-  </section>
-</main>
-
-<section id="feedback" class="section">
-  <div class="container">
-    <div class="kicker">Feedback</div>
-    <h2>Send Feedback</h2>
-
-    <form id="feedbackForm">
-      <div class="form-row">
-        <label for="fb-name">Name</label>
-        <input type="text" id="fb-name" placeholder="Your name" required>
-      </div>
-
-      <div class="form-row">
-        <label for="fb-email">Email</label>
-        <input type="email" id="fb-email" placeholder="you@example.com" required>
-      </div>
-
-      <div class="form-row">
-        <label for="fb-message">Message</label>
-        <textarea id="fb-message" rows="6"
-                  placeholder="Questions, feedback, or problems..." required></textarea>
-      </div>
-
-      <button type="submit" class="button primary">Send Feedback</button>
-      <p id="fb-note" class="muted" style="margin-top:10px;"></p>
-    </form>
-  </div>
-</section>
-
-<script>
-  const form = document.getElementById('feedbackForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = fb-name.value.trim();
-    const email = fb-email.value.trim();
-    const msg = fb-message.value.trim();
-
-    const to = 'daniel.giannopoulos@icloud.com';
-    const subject = encodeURIComponent(`IMP3D Feedback from ${name || 'Anonymous'}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
-
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    fb-note.textContent =
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      fb - note.textContent =
       'If your email app did not open, please email: daniel.giannopoulos@icloud.com';
-  });
-</script>
+    });
+  </script>
 
-<footer class="footer">
-  <div class="container">
-    Â© <span id="year"></span> IMP3D â€” Subdivision 3D Modeler
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="container">
+      Â© <span id="year"></span> IMP3D â€” Subdivision 3D Modeler
+    </div>
+  </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
+
 </html>
-
-
-
-
