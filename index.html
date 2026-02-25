@@ -150,29 +150,41 @@
 
         <p>
           Start by creating a primitive such as a <strong>Box</strong> or
-          <strong>Quad Sphere</strong>. IMP3D supports selection modes available in every tab:
+          <strong>Sphere</strong>. IMP3D provides consistent selection modes across all tabs:
           <strong>Points</strong>, <strong>Edges</strong>, and <strong>Polygons</strong>.
         </p>
 
         <p>
           Most tools operate on the current selection, or on the entire mesh when nothing
-          is selected. <kbd>Shift</kbd> + <kbd>Double-Click</kbd> quickly selects polygon loops.
+          is selected. In <strong>Polygons</strong> mode, select a face and use
+          <kbd>Shift</kbd> + <kbd>Double-Click</kbd> on an adjacent face to create a polygon loop.
+          In <strong>Edges</strong> mode, use <kbd>Shift</kbd> + <kbd>Double-Click</kbd> on an edge
+          to create an edge loop.
         </p>
 
         <p>
-          Use the <strong>Tool Properties</strong> dialog to adjust parameters precisely.
-          Primitive tools expose <em>segments</em>, <em>sides</em>, and <em>rings</em> to control
-          resolution and shape.
+          For example, under the <strong>Selection</strong> section choose
+          <strong>Polygons</strong>, select a face on the mesh, then open the
+          <strong>Topology</strong> menu and choose <strong>Extrude</strong>.
+          Drag directly in the viewport to preview and control the extrusion in real time.
         </p>
 
         <p>
-          With a loop selected, click <strong>Extrude</strong> and drag to extrude geometry.
-          Increase or decrease subdivision levels using the UI or the <kbd>-</kbd> and <kbd>=</kbd> keys.
+          Use the <strong>Tool Properties</strong> dialog (located in the status bar)
+          to adjust parameters precisely while a tool is active. Primitive tools expose
+          <em>segments</em>, <em>sides</em>, and <em>rings</em> to control resolution and shape.
+        </p>
+
+        <p>
+          Increase or decrease subdivision levels using the UI controls or the
+          <kbd>-</kbd> and <kbd>=</kbd> keys (up to four levels). Subdivision can be reduced
+          at any time to return to the coarse base mesh.
         </p>
 
         <p>
           Use <strong>Freeze</strong> to bake subdivision into real geometry, or
-          <strong>Triangulate</strong> for export to game engines and other pipelines.
+          <strong>Triangulate</strong> when preparing assets for game engines and
+          other real-time pipelines.
         </p>
 
         <p class="note">
@@ -180,6 +192,7 @@
         </p>
       </div>
     </section>
+
   </main>
 
   <section id="feedback" class="section">
